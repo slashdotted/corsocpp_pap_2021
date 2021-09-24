@@ -1,8 +1,5 @@
-#include <iostream>
-
-using namespace std;
+#include "namespaces.h"
 
 int main() {
-	cout << "Ciao mondo" << endl;
-	return 0;
+    namespaces();
 }
