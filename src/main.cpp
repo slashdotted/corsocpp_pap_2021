@@ -1,5 +1,5 @@
-#include "namespaces.h"
+#include "stringhe.h"
 
 int main() {
-    namespaces();
+    stringhe();
 }

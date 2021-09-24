@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_executable(c02046P src/main.cpp src/namespaces.cpp)
+add_executable(c02046P src/main.cpp src/namespaces.cpp src/overloading.cpp src/stringhe.cpp src/inizializzazione.cpp)
