@@ -1,5 +1,18 @@
-#include "stringhe.h"
+#include "frazione.h"
+#include <iostream>
+
+using std::cout;
+
+void stampa(const Frazione& f) {
+    cout << f.numeratore() 
+         << "/" << f.denominatore() 
+         << '\n';
+}
 
 int main() {
-    stringhe();
+    Frazione f;
+    Frazione* g{new Frazione};
+    f.denominatore(4);
+
+    delete g;
 }
