@@ -1,14 +1,17 @@
 #include "frazione.h"
 
+unsigned int Frazione::m_istanze = 0; // storage
+
 Frazione::Frazione()
-    : Frazione(0) // delegating constructor
+    : Frazione{0} // delegating constructor
 {
+    // Frazione{0}; // NO! (Crea un oggetto temporaneo)
 }
 
 Frazione::Frazione(int n, int d) 
     : m_num{n}, m_den{d} // init-list
 {
-
+    ++m_istanze;
 }
 
 const int& Frazione::numeratore() const {
