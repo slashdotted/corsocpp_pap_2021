@@ -13,6 +13,36 @@ struct Frazione {
         void numeratore(int num);
         void denominatore(int den);
 
+        Frazione& operator += (const Frazione& g);
+        Frazione& operator -= (const Frazione& g);
+
+        // Incremento prefix (++frazione)
+        Frazione& operator++() {
+            return *this += 1;
+        }
+
+        // Incremento postfix (frazione++)
+        Frazione operator++(int) {
+            auto temp{*this};
+            *this += 1;
+            return temp;
+        }
+
+        // Operatore di conversione
+        /*operator double () {
+            return (double) m_num / m_den;
+        }*/
+
+        /*Frazione operator+(const Frazione& b) {
+            auto temp{*this};
+            return temp += b;
+        }
+
+        Frazione operator-(const Frazione& b) {
+            auto temp{*this};
+            return temp -= b;
+        }*/
+
         static unsigned int istanze() {
             return m_istanze;
         }

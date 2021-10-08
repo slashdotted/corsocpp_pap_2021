@@ -30,3 +30,20 @@ void Frazione::numeratore(int num) {
 void Frazione::denominatore(int den) {
     m_den = den;
 }
+
+Frazione& Frazione::operator += (const Frazione& g) {
+    int temp_num { g.m_num * m_den };
+    m_den *= g.m_den;
+    m_num *= g.m_den;
+    m_num += temp_num;
+    return *this;
+}
+
+
+Frazione& Frazione::operator -= (const Frazione& g) {
+    int temp_num { g.m_num * m_den };
+    m_den *= g.m_den;
+    m_num *= g.m_den;
+    m_num -= temp_num;
+    return *this;
+}
