@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_executable(c02046P src/main.cpp src/frazione.cpp src/namespaces.cpp src/riferimenti.cpp src/overloading.cpp src/stringhe.cpp src/memoria.cpp src/inizializzazione.cpp src/autoearray.cpp)
+add_executable(c02046P src/main.cpp src/raii.cpp src/frazione.cpp src/namespaces.cpp src/riferimenti.cpp src/overloading.cpp src/stringhe.cpp src/memoria.cpp src/inizializzazione.cpp src/autoearray.cpp)
