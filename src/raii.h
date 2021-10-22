@@ -108,5 +108,8 @@ struct MySmartPointer {
         delete m_s;
     }
 
+    MySmartPointer(const MySmartPointer&) = delete;
+    MySmartPointer& operator=(const MySmartPointer&) = delete;
+
     Settimana *m_s;
 };
