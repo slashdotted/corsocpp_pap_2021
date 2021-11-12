@@ -5,7 +5,7 @@ using std::cout, std::endl;
 
 class Base {
        public:
-               ~Base() { cout << "Destroying Base" << endl; }
+               virtual ~Base() { cout << "Destroying Base" << endl; }
 };
 
 class Derived : public Base {

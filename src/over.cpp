@@ -34,7 +34,7 @@ public:
 };
 class DerivedOverriding : public BaseOverriding {
 public:
-       void f(double x)
+       void f(double x) override
        {
                cout << "Derived::f(double x)" << endl;
        }       
@@ -55,17 +55,36 @@ public:
                cout << "Base::f(double x)" << endl;
        }
 };
+
+
 class DerivedHiding : public BaseHiding {
 public:
-       void f(int x)
+       using BaseHiding::f;
+
+       virtual void f(int x)
        {
                cout << "Derived::f(int x)" << endl;
-       }       
+       } 
+
+       /*void f(double x) override {
+              BaseHiding::f(x);
+       } */   
+};
+
+class DoubleDerivedHiding : public DerivedHiding {
+       public:
+       using DerivedHiding::f;
+
+       void f(int x) override
+       {
+               cout << "Derived::f(int x)" << endl;
+       } 
 };
 
 void hiding()
 {
        DerivedHiding e;
        e.f(3.2);
+       //e.BaseHiding::f(3.2);
        e.f(3);
 }
