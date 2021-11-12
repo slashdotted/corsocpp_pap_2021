@@ -11,7 +11,7 @@ public:
     const std::string& nome() const noexcept;
     const std::string& istituto() const noexcept;
     int nr() const noexcept;
-    std::string classe() const noexcept;
+    virtual std::string classe() const noexcept;
 
 protected:
     std::string m_nome;

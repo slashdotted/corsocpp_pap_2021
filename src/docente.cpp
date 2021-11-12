@@ -16,5 +16,5 @@ Docente::Docente(const std::string& nome,
             }
 
 std::string Docente::classe()  const noexcept {
-    return "Docente";
+    return Collaboratore::classe() + "->" +  "Docente"; // "equivalente" a super in Java
 }            

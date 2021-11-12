@@ -2,10 +2,11 @@
 #include "docente.h"
 #include <iostream>
 
-using std::cout;
+using std::cout, std::endl;
 
 void foo(const Collaboratore& c) {
-    cout << "Collaboratore:" << c.nome() << "," << c.istituto() << "," << c.nr() << "," << c.classe();
+    cout << "Collaboratore:" << c.nome() << "," << c.istituto() << "," 
+    << c.nr() << "," << c.classe();
 }
 
 int main() {
@@ -19,4 +20,5 @@ int main() {
     foo(c);
     cout << "\n\n";
     foo(d);
+    cout << endl;
 }
