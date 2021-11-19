@@ -11,7 +11,7 @@
     derivazione public per default se dichiaro derivata con "struct"
     derivazione private per default se dichiaro derivata con "class"
 */
-struct Docente : public Collaboratore {
+struct Docente : public virtual Collaboratore {
     Docente(const std::string& nome,
             const std::string& istituto,
             int nr,

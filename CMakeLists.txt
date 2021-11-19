@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_executable(c02046P src/virtualdestructor.cpp src/main.cpp)
+add_executable(c02046P src/cast.cpp src/docentericercatore.cpp src/ricercatore.cpp src/docente.cpp src/collaboratore.cpp src/main.cpp)

@@ -14,6 +14,8 @@ public:
                   const std::string& istituto,
                   int nr);
 
+    //Collaboratore() = default;
+
     const std::string& nome() const noexcept;
     const std::string& istituto() const noexcept;
     int nr() const noexcept;

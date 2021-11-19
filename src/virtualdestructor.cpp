@@ -5,16 +5,22 @@ using std::cout, std::endl;
 
 class Base {
        public:
-               virtual ~Base() { cout << "Destroying Base" << endl; }
+        Base() {
+                cout << "Constructing Base" << endl;
+        }
+               
+        virtual ~Base() { cout << "Destroying Base" << endl; }
 };
 
 class Derived : public Base {
        public:
-               Derived() : m_intptr { new int } {};
-               ~Derived() override {
-                       cout << "Destroying Derived" << endl;
-                       delete m_intptr;
-               }
+        Derived() : m_intptr { new int } {
+                cout << "Constructing Derived" << endl;
+        };
+        ~Derived() override {
+                cout << "Destroying Derived" << endl;
+                delete m_intptr;
+        }
        private:
                int* m_intptr;
 };
