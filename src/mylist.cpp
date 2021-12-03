@@ -1,15 +1,17 @@
-#include "mylist.h"
+/*#include "mylist.h"
 
-MyList::MyList(int size)
+template<typename T>
+MyList<T>::MyList(int size)
 {
     if (size <= 0) {
         throw std::out_of_range("Invalid size");
     }
-    m_array = new int[size];
+    m_array = new T[size];
     m_size = size;
 }
 
-const int& MyList::operator[](int i) const
+template<typename T>
+const T& MyList<T>::operator[](int i) const
 {
     if (i < 0 || i >= m_size) {
         throw std::out_of_range("Invalid index");
@@ -17,7 +19,8 @@ const int& MyList::operator[](int i) const
     return m_array[i];
 }
 
-int& MyList::operator[](int i)
+template<typename T>
+T& MyList<T>::operator[](int i)
 {
     if (i < 0 || i >= m_size) {
         throw std::out_of_range("Invalid index");
@@ -25,11 +28,18 @@ int& MyList::operator[](int i)
     return m_array[i];
 }
 
-int MyList::size() const
+template<typename T>
+int MyList<T>::size() const
 {
     return m_size;
 }
 
-MyList::~MyList() {
+template<typename T>
+MyList<T>::~MyList() {
     delete[] m_array;
 }
+
+// Instanziazione esplicita
+//template class MyList<int>;
+//template class MyList<double>;
+*/
