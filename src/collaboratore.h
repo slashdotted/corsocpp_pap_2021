@@ -3,9 +3,9 @@
 #include <string>
 
 class AbstractBase {
-    public:
-        // metodo pure virtual
-        virtual std::string classe() const noexcept = 0;
+public:
+    // metodo pure virtual
+    virtual std::string classe() const noexcept = 0;
 };
 
 class Collaboratore : public AbstractBase {

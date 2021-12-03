@@ -10,7 +10,7 @@ void inizializzazione() {
         int pi(3.14);
     }
     {
-        int valore = {5}; // C++ 11 
+        int valore = {5}; // C++ 11
         // int pi = {3.14}; // Errore: narrowing conversion
     }
     {

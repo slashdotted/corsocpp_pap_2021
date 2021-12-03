@@ -76,15 +76,15 @@ void cast() {
         //DocenteRicercatore  dr1 = static_cast<DocenteRicercatore>(d);
 
         // Upcasting
-        Docente& drd = static_cast<Docente&>(dr); 
-        Docente* drd2 = static_cast<Docente*>(&dr); 
+        Docente& drd = static_cast<Docente&>(dr);
+        Docente* drd2 = static_cast<Docente*>(&dr);
 
         // Downcasting
-        DocenteRicercatore& drd3 = static_cast<DocenteRicercatore&>(drd); 
-        DocenteRicercatore* drd4 = static_cast<DocenteRicercatore*>(drd2);        
+        DocenteRicercatore& drd3 = static_cast<DocenteRicercatore&>(drd);
+        DocenteRicercatore* drd4 = static_cast<DocenteRicercatore*>(drd2);
 
         // Attenzione, downcasting non valido ma l'errore non viene segnalato
-        DocenteRicercatore& dr2 = static_cast<DocenteRicercatore&>(d); 
+        DocenteRicercatore& dr2 = static_cast<DocenteRicercatore&>(d);
         DocenteRicercatore* dr3 = static_cast<DocenteRicercatore*>(&d);
 
         cout << dr2.perc() << ", " << dr2.area() << '\n';
@@ -97,7 +97,7 @@ void cast() {
         DocenteRicercatore dr{"Roberto", "ISIN", 33, "Info", "DB", "Spaziale", 0.5};
 
         // Collaboratore c2 = dynamic_cast<Collaboratore>(d); // non posso convertire valori
-        
+
         // Upcasting
         try {
             Collaboratore& c3 = dynamic_cast<Collaboratore&>(d);
@@ -125,13 +125,13 @@ void cast() {
             // Cast non valido
             cout << "Cast non valido\n";
         }
-        
+
         // Downcasting non valido viene segnalato
         try {
             DocenteRicercatore& dr2 = dynamic_cast<DocenteRicercatore&>(d);
         } catch (...) {
             cout << "Cast non valido riga 83\n";
-        } 
+        }
 
         DocenteRicercatore* dr3 = dynamic_cast<DocenteRicercatore*>(&d);
 

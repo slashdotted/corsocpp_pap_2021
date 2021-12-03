@@ -4,44 +4,46 @@
 using std::cout, std::endl;
 
 class Base {
-       public:
-        Base() {
-                cout << "Constructing Base" << endl;
-        }
-               
-        virtual ~Base() { cout << "Destroying Base" << endl; }
+public:
+    Base() {
+        cout << "Constructing Base" << endl;
+    }
+
+    virtual ~Base() {
+        cout << "Destroying Base" << endl;
+    }
 };
 
 class Derived : public Base {
-       public:
-        Derived() : m_intptr { new int } {
-                cout << "Constructing Derived" << endl;
-        };
-        ~Derived() override {
-                cout << "Destroying Derived" << endl;
-                delete m_intptr;
-        }
-       private:
-               int* m_intptr;
+public:
+    Derived() : m_intptr { new int } {
+        cout << "Constructing Derived" << endl;
+    };
+    ~Derived() override {
+        cout << "Destroying Derived" << endl;
+        delete m_intptr;
+    }
+private:
+    int* m_intptr;
 };
 
 class Manager {
 public:
-       Manager() : m_resource{nullptr} {};
-       
-       ~Manager() {
-               delete m_resource;
-       }
-       void resource(Base* r) {
-               delete m_resource;
-               m_resource = r;
-       }
+    Manager() : m_resource{nullptr} {};
+
+    ~Manager() {
+        delete m_resource;
+    }
+    void resource(Base* r) {
+        delete m_resource;
+        m_resource = r;
+    }
 private:
-       Base* m_resource;
+    Base* m_resource;
 };
 
 void virtualdestructor() {
-       Manager g;
-       Derived* pd = new Derived();
-       g.resource(pd);
+    Manager g;
+    Derived* pd = new Derived();
+    g.resource(pd);
 }

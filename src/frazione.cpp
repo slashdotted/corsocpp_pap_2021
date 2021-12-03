@@ -8,7 +8,7 @@ Frazione::Frazione()
     // Frazione{0}; // NO! (Crea un oggetto temporaneo)
 }
 
-Frazione::Frazione(int n, int d) 
+Frazione::Frazione(int n, int d)
     : m_num{n}, m_den{d} // init-list
 {
     ++m_istanze;

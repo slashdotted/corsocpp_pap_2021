@@ -7,7 +7,7 @@ struct Giornata {
     }
 
     ~Giornata() {
-         std::cout << "Distruggo giornata " << m_g << std::endl;
+        std::cout << "Distruggo giornata " << m_g << std::endl;
     }
 
     std::string m_g;
@@ -31,7 +31,7 @@ struct Settimana {
     }
 
     ~Settimana() {
-         std::cout << "Distruggo settimana " << std::endl;
+        std::cout << "Distruggo settimana " << std::endl;
     }
 
     Giornata m_lu{"lunedì"};
@@ -44,27 +44,27 @@ struct Settimana {
 };
 
 struct SettimanaH {
-    SettimanaH() 
+    SettimanaH()
         : m_lu{new Giornata{"lunedì"}},
-          m_ma{new Giornata{"martedì"}},
-          m_me{new Giornata{"mercoledì"}},
-          m_gi{new Giornata{"giovedì"}},
-          m_ve{new Giornata{"venerdì"}},
-          m_sa{new Giornata{"sabato"}},
-          m_do{new Giornata{"domenica"}}
-        {
+    m_ma{new Giornata{"martedì"}},
+    m_me{new Giornata{"mercoledì"}},
+    m_gi{new Giornata{"giovedì"}},
+    m_ve{new Giornata{"venerdì"}},
+    m_sa{new Giornata{"sabato"}},
+    m_do{new Giornata{"domenica"}}
+    {
         std::cout << "Costruisco settimana" << std::endl;
     }
 
     // costruttore di copia
-    SettimanaH(const SettimanaH& o)         
+    SettimanaH(const SettimanaH& o)
         : m_lu{new Giornata{o.m_lu->m_g}},
-          m_ma{new Giornata{o.m_ma->m_g}},
-          m_me{new Giornata{o.m_me->m_g}},
-          m_gi{new Giornata{o.m_gi->m_g}},
-          m_ve{new Giornata{*o.m_ve}}, // mi appoggio al costruttore di copia di giornata
-          m_sa{new Giornata{*o.m_sa}}, // mi appoggio al costruttore di copia di giornata
-          m_do{new Giornata{*o.m_do}} { // mi appoggio al costruttore di copia di giornata
+    m_ma{new Giornata{o.m_ma->m_g}},
+    m_me{new Giornata{o.m_me->m_g}},
+    m_gi{new Giornata{o.m_gi->m_g}},
+    m_ve{new Giornata{*o.m_ve}}, // mi appoggio al costruttore di copia di giornata
+    m_sa{new Giornata{*o.m_sa}}, // mi appoggio al costruttore di copia di giornata
+    m_do{new Giornata{*o.m_do}} { // mi appoggio al costruttore di copia di giornata
     }
 
     // operatore di assegnamento di copia

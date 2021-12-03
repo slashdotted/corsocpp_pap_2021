@@ -6,24 +6,24 @@ using std::cout;
 void intro() {
     int i{13};
     int& iref{i};
-    //int& irefb; // un riferimento deve essere 
-                  // per forza inizializzato
+    //int& irefb; // un riferimento deve essere
+    // per forza inizializzato
     int* iptr{&i};
 
-    cout << "i=" << i 
-         << ", iref=" << iref 
+    cout << "i=" << i
+         << ", iref=" << iref
          << ", iptr" << *iptr << '\n';
 
     i = 17;
 
-    cout << "i=" << i 
-         << ", iref=" << iref 
+    cout << "i=" << i
+         << ", iref=" << iref
          << ", iptr" << *iptr << '\n';
-        
+
     iref = 21;
 
-    cout << "i=" << i 
-         << ", iref=" << iref 
+    cout << "i=" << i
+         << ", iref=" << iref
          << ", iptr" << *iptr << '\n';
 }
 
@@ -36,7 +36,7 @@ void foo(int& x) {
 }
 
 void foo2(const int& x) {
-   
+
 }
 
 void bar(int* x) {
@@ -44,7 +44,7 @@ void bar(int* x) {
 }
 
 void bat(int*& k) {
-    
+
 }
 
 int val() {

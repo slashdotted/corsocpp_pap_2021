@@ -13,18 +13,18 @@ class Base final
 class Base2
 {
 public:
-   virtual void f() {}
+    virtual void f() {}
 };
 class Derived : public Base2
 {
 public:
-   void f() final override {}
+    void f() final override {}
 };
 
 class DoubleDerived : public Derived
 {
 public:
-   //void f() override {}
+    //void f() override {}
 };
 
 // ******************************************************
@@ -58,7 +58,7 @@ public:
 
 class ClasseConMetodoDefault {
 public:
-    ClasseConMetodoDefault(int i) {  } 
+    ClasseConMetodoDefault(int i) {  }
     ClasseConMetodoDefault() = default; // costruttore triviale
-    
+
 };

@@ -12,7 +12,7 @@ struct Foo {
         std::cout << "Costruisco Foo con initializer list: " << m_i << '\n';
     }
 
-    Foo(int i = 0) : m_i{i}{
+    Foo(int i = 0) : m_i{i} {
         std::cout << "Costruisco Foo: " << i << '\n';
     }
 
@@ -79,7 +79,7 @@ void unique() {
         // for (auto& e : lista) { delete e; }; lista.clear();
 
         std::vector<std::unique_ptr<Foo>> lista2;
-        lista2.push_back(std::unique_ptr<Foo>{new Foo{}});
+        lista2.push_back(std::unique_ptr<Foo> {new Foo{}});
 
         {
             std::unique_ptr<Foo> k{new Foo{}};
@@ -116,7 +116,7 @@ void shared() {
     fun_ref(sp2);
 
     std::vector<std::shared_ptr<Foo>> lista2;
-    lista2.push_back(std::shared_ptr<Foo>{new Foo{}});
+    lista2.push_back(std::shared_ptr<Foo> {new Foo{}});
 
     {
         std::shared_ptr<Foo> k{new Foo{}};

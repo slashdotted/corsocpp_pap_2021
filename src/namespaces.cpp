@@ -3,30 +3,30 @@
 
 //using namespace std;
 namespace supsi {
-	namespace dacd {
-		void foo() {
-			std::cout << "supsi dacd" << std::endl;
-		}
-	}
+namespace dacd {
+void foo() {
+    std::cout << "supsi dacd" << std::endl;
+}
+}
 }
 
 // nested namespaces (C++17)
 namespace supsi::dti {
-		void foo() {
-			std::cout << "supsi dti" << std::endl;
-		}
+void foo() {
+    std::cout << "supsi dti" << std::endl;
+}
 }
 
 namespace usi {
-	void foo() {
-		std::cout << "usi" << std::endl;
-	}
+void foo() {
+    std::cout << "usi" << std::endl;
+}
 }
 
 namespace std {
-	void foo() {
+void foo() {
 
-	}
+}
 }
 
 // Alias di namespace
@@ -37,7 +37,7 @@ using std::cerr;
 using std::endl;
 
 void namespaces() {
-	ab::foo();
-	cerr << "Ciao mondo" << endl;
+    ab::foo();
+    cerr << "Ciao mondo" << endl;
 
 }

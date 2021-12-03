@@ -13,7 +13,7 @@ struct Foo {
         std::cout << "Costruisco Foo con initializer list: " << m_i << '\n';
     }
 
-    Foo(int i = 0) : m_i{i}{
+    Foo(int i = 0) : m_i{i} {
         std::cout << "Costruisco Foo: " << i << '\n';
     }
 
@@ -58,7 +58,7 @@ void standardlibrary() {
     v.emplace_back(3);
     // Accesso agli elementi
     auto val = v.at(2);
-    // Dimensione 
+    // Dimensione
     std::cout<< v.size() << '\n';
     for (auto& e : v) {
         // ..
@@ -86,10 +86,10 @@ void standardlibrary() {
 
 
     if (m.count("quattro")) {
-         // esiste
-         auto valore =  m["quattro"];
-         // oppure
-         auto valore2 = m.at("quattro");
+        // esiste
+        auto valore =  m["quattro"];
+        // oppure
+        auto valore2 = m.at("quattro");
     }
 
     auto it = m.find("quattro");
@@ -101,5 +101,5 @@ void standardlibrary() {
     }
 
     Foo k{1,2,3,4,5,6};
-  // https://en.cppreference.com/w/
+    // https://en.cppreference.com/w/
 }

@@ -4,8 +4,12 @@
 using std::cout;
 
 struct Foo {
-    Foo() { cout << "Costruisco Foo\n";}
-    ~Foo() { cout << "Distruggo Foo\n";}
+    Foo() {
+        cout << "Costruisco Foo\n";
+    }
+    ~Foo() {
+        cout << "Distruggo Foo\n";
+    }
 };
 
 void bar() {
@@ -14,7 +18,7 @@ void bar() {
 
 void baz() noexcept {
     cout << "Inizio baz\n";
-    bar();   
+    bar();
     cout << "Fine baz\n";
 }
 
@@ -23,7 +27,7 @@ void foo() {
     auto i{std::make_unique<Foo>()};
     //auto* i{new Foo};
     baz();
-    // 
+    //
     //delete i;
 }
 
